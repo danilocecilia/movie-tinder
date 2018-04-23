@@ -4,5 +4,13 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyBEGRWdWl9koMP3LwaDLtjgYH8DZr1WXm8",
+    authDomain: "movie-tinder-2672f.firebaseapp.com",
+    databaseURL: "https://movie-tinder-2672f.firebaseio.com",
+    projectId: "movie-tinder-2672f",
+    storageBucket: "movie-tinder-2672f.appspot.com",
+    messagingSenderId: "43496436877"
+  }
 };
