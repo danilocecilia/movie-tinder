@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from 'angularfire2/firestore';
-import { Observable } from 'rxjs/Observable';
-// import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireDatabase } from 'angularfire2/database';
-
-import {MatToolbarModule} from '@angular/material/toolbar';
-
-
+import { AuthService } from './service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +8,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 })
 export class AppComponent {
   title = 'app';
-  items: Observable<any[]>;
 
-  constructor(db: AngularFireDatabase) {
-    this.items = db.list('/books').valueChanges();
+  constructor(private authService: AuthService) {
+    // tslint:disable-next-line:no-debugger
+    authService.handleAuthentication();
   }
 }

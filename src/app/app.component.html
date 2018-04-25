@@ -1,9 +1,32 @@
-<mat-toolbar color="primary">
-  <span>Movie Tinder</span>
-</mat-toolbar>
-<ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.title}}
-  </li>
-</ul>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Auth0 - Angular</a>
 
+      <button
+        class="btn btn-primary btn-margin"
+        routerLink="/">
+          Home
+      </button>
+
+      <button
+        class="btn btn-primary btn-margin"
+        *ngIf="!authService.isAuthenticated()"
+        routerLink="/login">
+          Log In
+      </button>
+
+      <button
+        class="btn btn-primary btn-margin"
+        *ngIf="authService.isAuthenticated()"
+        (click)="authService.logout()">
+          Log Out
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
