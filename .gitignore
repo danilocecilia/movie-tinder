@@ -1,6 +1,7 @@
 DS_STORE
 
 /dist/
+/src/assets/
 bazel-*
 e2e_test.*
 node_modules
