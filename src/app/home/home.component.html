@@ -2,5 +2,5 @@
   You are logged in!
 </h4>
 <h4 *ngIf="!authService.isAuthenticated()">
-  You are not logged in! Please <a (click)="authService.login()">Log In</a> to continue.
+  You are not logged in! Please <a routerLink="/login">Log In</a> to continue.
 </h4>
