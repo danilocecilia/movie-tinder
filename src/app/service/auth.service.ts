@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
 import * as auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
+
 @Injectable()
 export class AuthService {
 
@@ -17,15 +17,17 @@ export class AuthService {
 
   constructor(public router: Router) { }
 
-  public login(username: string, password: string): void {
-    this.auth0.login({
-      realm: 'Username-Password-Authentication',
-      username,
-      password
-    }, (err, authResult) => {
+  public login(email: string, password: string): void {
+    // tslint:disable-next-line:no-debugger
+
+    this.auth0.login({realm: 'Username-Password-Authentication', email, password},
+     (err, authResult) => {
+       console.log('err: ' + err);
+       console.log('authResult: ' + authResult);
+      // tslint:disable-next-line:no-debugger
       if (err) {
         console.log(err);
-        alert(`Error: ${err.error_description}. Check the console for further details.`);
+        alert(`Error: ${err}. Check the console for further details.`);
         return;
       } else if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
@@ -48,12 +50,14 @@ export class AuthService {
   }
 
   public loginWithGoogle(): void {
+    // tslint:disable-next-line:no-debugger
     this.auth0.authorize({
       connection: 'google-oauth2',
     });
   }
 
   public handleAuthentication(): void {
+    // tslint:disable-next-line:no-debugger
     this.auth0.parseHash((err, authResult) => {
       // tslint:disable-next-line:no-debugger
       if (authResult && authResult.accessToken && authResult.idToken) {

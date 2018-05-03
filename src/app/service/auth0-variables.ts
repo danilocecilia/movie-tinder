@@ -7,7 +7,7 @@ interface AuthConfig {
 export const AUTH_CONFIG: AuthConfig = {
     clientID: 'ZZPIa2gbVJpsHn_CeNDGbymjaw3ukR05',
     domain: 'dcecilia.auth0.com',
-    callbackURL: 'http://localhost:3000/callback'
+    callbackURL: 'http://localhost:4200/callback'
 };
 
 // clientID: 'ZZPIa2gbVJpsHn_CeNDGbymjaw3ukR05',

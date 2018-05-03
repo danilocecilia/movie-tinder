@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBEGRWdWl9koMP3LwaDLtjgYH8DZr1WXm8",
-    authDomain: "movie-tinder-2672f.firebaseapp.com",
-    databaseURL: "https://movie-tinder-2672f.firebaseio.com",
-    projectId: "movie-tinder-2672f",
-    storageBucket: "movie-tinder-2672f.appspot.com",
-    messagingSenderId: "43496436877"
+    apiKey: 'AIzaSyBEGRWdWl9koMP3LwaDLtjgYH8DZr1WXm8',
+    authDomain: 'movie-tinder-2672f.firebaseapp.com',
+    databaseURL: 'https://movie-tinder-2672f.firebaseio.com',
+    projectId: 'movie-tinder-2672f',
+    storageBucket: 'movie-tinder-2672f.appspot.com',
+    messagingSenderId: '43496436877'
   }
 };
