@@ -7,10 +7,9 @@ import { AuthService } from './service/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Movie Tinder';
 
   constructor(private authService: AuthService) {
-    // tslint:disable-next-line:no-debugger
     authService.handleAuthentication();
   }
 }

@@ -53,7 +53,6 @@ export class AuthService {
   }
 
   public loginWithGoogle(): void {
-    // tslint:disable-next-line:no-debugger
     this.auth0.authorize({
       connection: "google-oauth2"
     });
