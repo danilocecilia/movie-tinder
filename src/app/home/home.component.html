@@ -1,6 +1,16 @@
-<h4 *ngIf="authService.isAuthenticated()">
-  You are logged in!
-</h4>
-<h4 *ngIf="!authService.isAuthenticated()">
-  You are not logged in! Please <a routerLink="/login">Log In</a> to continue.
-</h4>
+<mat-card *ngIf="authService.isAuthenticated()">
+  <mat-card-header>
+    <img mat-card-avatar src="{{imageUrl}}">
+    <mat-card-title>Cards are the best</mat-card-title>
+    <mat-card-subtitle>Really, they are!</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{imageUrl}}">
+  <mat-card-content>
+    <p>Something pretty...</p>
+  </mat-card-content>
+</mat-card>
+
+<!-- <h4 *ngIf="!authService.isAuthenticated()">
+  You are not logged in! Please
+  <a routerLink="/login">Log In</a> to continue.
+</h4> -->

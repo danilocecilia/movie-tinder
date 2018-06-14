@@ -36,6 +36,7 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
+  MatFormFieldModule,
 } from '@angular/material';
 
 // firebase configurarion
@@ -51,6 +52,8 @@ import { CallbackComponent } from './callback/callback.component';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+
+import { MovieService } from "../app/service/movie.service";
 
 import { ROUTES } from './app.routes';
 
@@ -99,10 +102,12 @@ import { ROUTES } from './app.routes';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatFormFieldModule,
+    MatInputModule,
     RouterModule.forRoot(ROUTES),
     HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

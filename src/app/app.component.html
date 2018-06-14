@@ -1,10 +1,13 @@
-<mat-toolbar>  
+<!-- <mat-toolbar>
   <mat-toolbar-row>
-    <a href="#">Movie Tinder</a>
-  </mat-toolbar-row>
-</mat-toolbar>
+    <span>Movie Tinder</span> -->
+<!-- This fills the remaining space of the current row -->
+<!-- <span class="example-fill-remaining-space"></span>
+    <span>Right Aligned Text</span> -->
+<!-- </mat-toolbar-row>
+</mat-toolbar> -->
 
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <button class="btn btn-primary btn-margin" routerLink="/">
@@ -27,7 +30,24 @@
 
     </div>
   </div>
-</nav>
+</nav> -->
+
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Input">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Textarea"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Select">
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
 
 <main class="container">
   <router-outlet></router-outlet>
